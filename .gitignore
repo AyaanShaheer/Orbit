@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+orbit_graph_vis.html
+docker/falkordb-x64.so

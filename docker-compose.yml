@@ -1,0 +1,13 @@
+services:
+  falkordb:
+    image: orbit-falkordb:latest
+    build: ./docker
+    container_name: orbit-falkordb
+    ports:
+      - "6380:6379"
+    volumes:
+      - falkordb_data:/data
+    restart: unless-stopped
+
+volumes:
+  falkordb_data:
