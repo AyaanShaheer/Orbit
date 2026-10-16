@@ -4,4 +4,5 @@ __pycache__/
 .pytest_cache/
 *.db
 orbit_graph_vis.html
+lib/
 docker/falkordb-x64.so
