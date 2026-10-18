@@ -263,10 +263,10 @@ Interactive Swagger API documentation available at **`http://localhost:8000/docs
 
 ## 👥 Team & Workstream Ownership
 
-* **Ayaan**: Architecture, FalkorDB schema design, multi-hop Cypher queries, temporal supersession rules, and end-to-end integration.
-* **Teammate 2**: Agent coordination state machine, task manager, optimistic locking, and concurrency tests.
-* **Teammate 3**: Mission Control UI (Streamlit), Pyvis graph visualizer, contradiction inspector, and replay timeline.
-* **Teammate 4**: Synthetic scenarios, fault injection fixtures, regression test suite, and release documentation.
+* **Ayaan Team Lead**: Architecture, FalkorDB schema design, multi-hop Cypher queries, temporal supersession rules, and end-to-end integration.
+* **Zain Developer**: Agent coordination state machine, task manager, optimistic locking, and concurrency tests.
+* **Saif Developer**: Mission Control UI (Streamlit), Pyvis graph visualizer, contradiction inspector, and replay timeline.
+* **Afzaal Tester & Content Writer**: Synthetic scenarios, fault injection fixtures, regression test suite, and release documentation.
 
 ---
 
