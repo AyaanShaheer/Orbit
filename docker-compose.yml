@@ -1,13 +1,22 @@
 services:
   falkordb:
-    image: orbit-falkordb:latest
-    build: ./docker
+    # Use official FalkorDB image (recommended for judges):
+    image: falkordb/falkordb:latest
+    # If the official image fails to pull in your environment, comment the line above
+    # and uncomment these two lines to build from the local binary:
+    # image: orbit-falkordb:latest
+    # build: ./docker
     container_name: orbit-falkordb
     ports:
       - "6380:6379"
     volumes:
       - falkordb_data:/data
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-p", "6379", "PING"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
 volumes:
   falkordb_data:

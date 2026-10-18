@@ -180,6 +180,8 @@ RETURN new_f
 | **Scene 3** | **Lesson Survived** | Verified outcome is recorded; session is reset; next incident dynamically adapts to apply circuit breaker tuning instead of cache restarts. | Cross-session memory persistence and continuous operational learning. |
 | **Scene 4** | **Break the Memory** | Stale fact is injected; two agents race to claim a critical task simultaneously; version check rejects duplicate work. | Optimistic concurrency locking & auditable rejection traces. |
 
+> 📽️ **For judges:** See [DEMO_GUIDE.md](./DEMO_GUIDE.md) for a complete step-by-step walkthrough of each scene including what Cypher queries to look for and how to verify FalkorDB is indispensable.
+
 ---
 
 ## ⚖️ Comparative Evaluation: Without Graph vs With ORBIT
@@ -204,12 +206,14 @@ RETURN new_f
 
 ### 1. Start FalkorDB Container
 ```bash
+# Uses the official falkordb/falkordb Docker image — no local build required
 docker compose up -d
 ```
 Verify FalkorDB is running on `127.0.0.1:6380`:
 ```bash
-docker ps
+docker ps | grep orbit-falkordb
 ```
+> **Note:** If the official image fails to pull (network issues), see `docker/Dockerfile` for a local build fallback.
 
 ### 2. Install Dependencies & Run Tests
 ```powershell

@@ -1,8 +1,17 @@
+# Python
 .venv/
 __pycache__/
 *.pyc
 .pytest_cache/
 *.db
+
+# Generated files
 orbit_graph_vis.html
+
+# Binary / large files
 lib/
 docker/falkordb-x64.so
+docker/*.so
+
+# Environment / secrets
+.env
